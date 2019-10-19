@@ -7,8 +7,8 @@ public class OtherTariff extends MegafonTariff {
     private boolean perSecondBilling;
     private boolean callsAndMessagesOnRussianNumbers;
 
-    public OtherTariff(int tariffId, String tariffName, boolean hit, String tariffDescription, int tariffCost, int tariffPeriod, boolean ableToBeChosen, boolean ableToFindOutDetails, int amountOfGigabytes, boolean unlimitedInternet, boolean unlimitedCalls, boolean perSecondBilling, boolean callsAndMessagesOnRussianNumbers) {
-        super(tariffId, tariffName, hit, tariffDescription, tariffCost, tariffPeriod, ableToBeChosen, ableToFindOutDetails);
+    public OtherTariff(int id, String name, boolean hit, String description, int cost, int period, boolean ableToBeChosen, boolean ableToFindOutDetails, int amountOfGigabytes, boolean unlimitedInternet, boolean unlimitedCalls, boolean perSecondBilling, boolean callsAndMessagesOnRussianNumbers) {
+        super(id, name, hit, description, cost, period, ableToBeChosen, ableToFindOutDetails);
         this.amountOfGigabytes = amountOfGigabytes;
         this.unlimitedInternet = unlimitedInternet;
         this.unlimitedCalls = unlimitedCalls;
@@ -59,7 +59,7 @@ public class OtherTariff extends MegafonTariff {
     @Override
     public String toString() {
         String objectDisplay;
-        objectDisplay = super.getTariffName() + " " + super.getTariffDescription();
+        objectDisplay = super.getName() + " " + super.getDescription();
         if(unlimitedInternet){
             objectDisplay = objectDisplay + " " + "Безлимитный интернет";
         } else if (amountOfGigabytes > 0){
@@ -74,7 +74,7 @@ public class OtherTariff extends MegafonTariff {
         if (callsAndMessagesOnRussianNumbers){
             objectDisplay = objectDisplay + " Звонки и SMS на номера России";
         }
-        objectDisplay = objectDisplay + " " + super.getTariffCost() + "Р";
+        objectDisplay = objectDisplay + " " + super.getCost() + "Р";
         if (super.isAbleToBeChosen()){
             objectDisplay = objectDisplay + " Выбрать";
         }

@@ -1,40 +1,40 @@
 package ru.itpark.model;
 
 public abstract class MegafonTariff {
-    private int tariffId;
-    private String tariffName;
+    private int id;
+    private String name;
     private boolean hit;
-    private String tariffDescription;
-    private int tariffCost;
-    private int tariffPeriod;
+    private String description;
+    private int cost;
+    private int period;
     private boolean ableToBeChosen;
     private boolean ableToFindOutDetails;
 
-    public MegafonTariff(int tariffId, String tariffName, boolean hit, String tariffDescription, int tariffCost, int tariffPeriod, boolean ableToBeChosen ,boolean ableToFindOutDetails) {
-        this.tariffId = tariffId;
-        this.tariffName = tariffName;
+    public MegafonTariff(int id, String name, boolean hit, String description, int cost, int period, boolean ableToBeChosen, boolean ableToFindOutDetails) {
+        this.id = id;
+        this.name = name;
         this.hit = hit;
-        this.tariffDescription = tariffDescription;
-        this.tariffCost = tariffCost;
-        this.tariffPeriod = tariffPeriod;
+        this.description = description;
+        this.cost = cost;
+        this.period = period;
         this.ableToBeChosen = ableToBeChosen;
         this.ableToFindOutDetails = ableToFindOutDetails;
     }
 
-    public int getTariffId() {
-        return tariffId;
+    public int getId() {
+        return id;
     }
 
-    public void setTariffId(int tariffId) {
-        this.tariffId = tariffId;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getTariffName() {
-        return tariffName;
+    public String getName() {
+        return name;
     }
 
-    public void setTariffName(String tariffName) {
-        this.tariffName = tariffName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public boolean isHit() {
@@ -45,28 +45,28 @@ public abstract class MegafonTariff {
         this.hit = hit;
     }
 
-    public String getTariffDescription() {
-        return tariffDescription;
+    public String getDescription() {
+        return description;
     }
 
-    public void setTariffDescription(String tariffDescription) {
-        this.tariffDescription = tariffDescription;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public int getTariffCost() {
-        return tariffCost;
+    public int getCost() {
+        return cost;
     }
 
-    public void setTariffCost(int tariffCost) {
-        this.tariffCost = tariffCost;
+    public void setCost(int cost) {
+        this.cost = cost;
     }
 
-    public int getTariffPeriod() {
-        return tariffPeriod;
+    public int getPeriod() {
+        return period;
     }
 
-    public void setTariffPeriod(int tariffPeriod) {
-        this.tariffPeriod = tariffPeriod;
+    public void setPeriod(int period) {
+        this.period = period;
     }
 
     public boolean isAbleToBeChosen() {

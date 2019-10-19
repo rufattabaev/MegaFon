@@ -8,8 +8,8 @@ public class TurnOnTariff extends MegafonTariff {
     private String descriptionOfPersonalOffer;
     private String descriptionOfCashback;
 
-    public TurnOnTariff(int tariffId, String tariffName, boolean hit, String tariffDescription, int tariffCost, int tariffPeriod, boolean ableToBeChosen ,boolean ableToFindOutDetails, int amountOfMinutes, boolean unlimitedInternet, int amountOfGigabytes, int amountOfMessages,String descriptionOfPersonalOffer, String descriptionOfCashback) {
-        super(tariffId, tariffName, hit, tariffDescription, tariffCost, tariffPeriod, ableToBeChosen,ableToFindOutDetails);
+    public TurnOnTariff(int id, String name, boolean hit, String description, int cost, int period, boolean ableToBeChosen, boolean ableToFindOutDetails, int amountOfMinutes, boolean unlimitedInternet, int amountOfGigabytes, int amountOfMessages, String descriptionOfPersonalOffer, String descriptionOfCashback) {
+        super(id, name, hit, description, cost, period, ableToBeChosen, ableToFindOutDetails);
         this.amountOfMinutes = amountOfMinutes;
         this.unlimitedInternet = unlimitedInternet;
         this.amountOfGigabytes = amountOfGigabytes;
@@ -69,7 +69,7 @@ public class TurnOnTariff extends MegafonTariff {
     @Override
     public String toString() {
         String objectDisplay;
-        objectDisplay = super.getTariffName();
+        objectDisplay = super.getName();
 
         if (isHit()){
             objectDisplay = objectDisplay + " " + "Хит";
@@ -84,7 +84,7 @@ public class TurnOnTariff extends MegafonTariff {
         if (amountOfMessages > 0){
             objectDisplay = objectDisplay + " " + amountOfMessages;
         }
-        objectDisplay = objectDisplay + " " + descriptionOfPersonalOffer + " " + descriptionOfCashback + " " + super.getTariffCost() + "Р " + super.getTariffPeriod() + " дней ";
+        objectDisplay = objectDisplay + " " + descriptionOfPersonalOffer + " " + descriptionOfCashback + " " + super.getCost() + "Р " + super.getPeriod() + " дней ";
 
         if (super.isAbleToBeChosen()){
             objectDisplay = objectDisplay + "Выбрать ";
